@@ -1,13 +1,209 @@
+/* background-color: rgb(255, 136, 17); */
+
 body {
+  background-color: rgb(255, 255, 250);
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*header*/
+
+.header {
+}
+
+.header-container {
+  padding: 20px 10px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-translate {
+  width: 25px;
+}
+
+/* .nav-bar {
+} */
+.header .nav-items {
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav-item {
+  text-align: center;
+  display: block;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: auto 10px;
+  transition: 400ms;
+  font-size: 1em;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 400ms;
+  transform: scale(1.2);
+}
+
+.logo {
+  width: 50px;
+}
+
+/*main*/
+.main-container {
+  padding: 25px 0;
+}
+.about-animals-home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.img-about-animals-home {
+  width: 50%;
+}
+.content-about-animals-home {
+  text-align: center;
+  width: 50%;
+  padding: 20px;
+}
+
+.btn-about {
+  border-radius: 20px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 1px solid white;
+  color: white;
+  background-color: rgb(81, 80, 82);
+  margin: 10px;
+  transition: 400ms;
+}
+.btn-about:hover {
+  transform: scale(1.2);
+  background-color: rgba(81, 80, 82, 0.5);
+  transition: 400ms;
+}
+.main {
+  margin: auto;
+  width: 90%;
+  background-color: rgb(255, 255, 250);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/*footer*/
+
+.footer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  text-transform: uppercase;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(81, 80, 82);
+}
+
+.leaflet-container {
+  height: 400px;
+  width: 400px;
+}
+
+.animals-home-container {
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.map {
+  margin-left: 30px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 15px;
+}
+
+/* .animals-home-list {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+.animals-home-list li {
+  border: 1px solid black;
+  margin: 5px;
+  text-align: start;
+} */
+
+.animals-home-list {
+  counter-reset: li;
+  list-style: none;
+
+  padding: 0;
+}
+.animals-home-list p {
+  text-align: start;
+  position: relative;
+  display: block;
+  padding: 0.4em 0.4em 0.4em 2em;
+  margin: 0.5em 0;
+  background: #e9e4e075;
+  color: #444;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: 0.3s ease-out;
+}
+
+.animals-home-list p:hover {
+  background: #e9e4e0;
+  transform: scale(1.1);
+}
+.animals-home-list p:hover:before {
+  transform: rotate(360deg);
+}
+.animals-home-list p:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #ff8811;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: 0.3em solid white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all 0.3s ease-out;
+}
+
+li {
+  padding: 0;
+}
+li button {
+  border-radius: 0 15px 15px 0;
+  margin-left: 15px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
 }

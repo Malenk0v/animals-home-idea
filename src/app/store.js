@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import pageReducer from '../reducers/pageReducer';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    page: pageReducer,
   },
 });
